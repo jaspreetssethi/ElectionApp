@@ -1,9 +1,17 @@
 require.config({
     baseUrl: 'js',
-    paths: {}
+    paths: {
+        backbone: 'lib/backbone/backbone',
+        "backbone.babysitter": 'lib/backbone.babysitter/lib/backbone.babysitter',
+        marionette: 'lib/backbone.marionette/lib/core/backbone.marionette',
+        "backbone.wreqr": 'lib/backbone.wreqr/lib/backbone.wreqr',
+        jquery: 'lib/jquery/dist/jquery',
+        tpl: 'lib/require-tpl/tpl',
+        text: 'lib/text/text',
+        underscore: 'lib/underscore/underscore'        
+    }
 });
 
-require([/*what you want*/], function (/* what you get */) {
-    alert('Hello World');
-    //runs when you get what you wanted
+require(['app'], function (App) {
+    App.start();
 });
