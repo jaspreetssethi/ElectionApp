@@ -6,12 +6,19 @@ require.config({
         marionette: 'lib/backbone.marionette/lib/core/backbone.marionette',
         "backbone.wreqr": 'lib/backbone.wreqr/lib/backbone.wreqr',
         jquery: 'lib/jquery/dist/jquery',
-        tpl: 'lib/require-tpl/tpl',
+        tpl: 'lib/requirejs-tpl/tpl',
         text: 'lib/text/text',
         underscore: 'lib/underscore/underscore'        
     }
 });
 
-require(['app'], function (App) {
+require(['app', 'views/welcome', 'backbone'], function (App, WelcomeView, Backbone) {
     App.start();
+    
+    App.Main.show(new WelcomeView({
+        model: new Backbone.Model({
+            isAdmin: true,
+            name: 'Jaspreet'
+        })
+    }));
 });

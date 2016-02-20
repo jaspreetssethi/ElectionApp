@@ -5,6 +5,9 @@ define(['marionette'], function(Marionette) {
         },
         onStart: function(){
             console.log('Application Started!');
+        },
+        regions: {
+            Main: 'div.main'
         }
     });
     
