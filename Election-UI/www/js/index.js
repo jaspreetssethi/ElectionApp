@@ -8,11 +8,17 @@ require.config({
         jquery: 'lib/jquery/dist/jquery',
         tpl: 'lib/requirejs-tpl/tpl',
         text: 'lib/text/text',
-        underscore: 'lib/underscore/underscore'        
+        underscore: 'lib/underscore/underscore',   
+        bootstrap: 'lib/bootstrap/dist/js/bootstrap'
+    },
+    shim: {
+        bootstrap: {
+            deps: ['jquery']
+        }
     }
 });
 
-require(['app', 'views/welcome', 'backbone'], function (App, WelcomeView, Backbone) {
+require(['app', 'views/welcome', 'backbone', 'bootstrap'], function (App, WelcomeView, Backbone) {
     App.start();
     
     App.Main.show(new WelcomeView({
