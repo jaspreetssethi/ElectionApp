@@ -31,3 +31,8 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+/Election-UI/config.xml
+/Election-UI/hooks
+/Election-UI/platforms
+/Election-UI/plugins
+/Election-UI/config.xml
