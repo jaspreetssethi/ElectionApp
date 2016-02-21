@@ -25,14 +25,13 @@ require.config({
     }
 });
 
-require(['app', 'views/candidateList', 'views/header', 'backbone', 'bootstrap'], function (App, WelcomeView, HeaderView, Backbone) {
+require(['app', 'bootstrap', 'events/main'], function (App) {
     App.start();
     
-    App.Header.show(new HeaderView({
-        
-    }));
+    App.execute('headerShow');
+    App.execute('candidateListDisplay');
     
-    App.Main.show(new WelcomeView({
+ /*   App.Main.show(new WelcomeView({
         collection: new Backbone.Collection([{
             firstName: 'Arvind',
             lastName: 'Kejriwal',
@@ -52,6 +51,6 @@ require(['app', 'views/candidateList', 'views/header', 'backbone', 'bootstrap'],
             dateOfBirth: '1996-09-09',
             constituencyName: 'Kolkata',
             descriptionShort: 'asdf asdf asdf'
-        }])
-    }));
+        }])*/
+//    }));
 });
