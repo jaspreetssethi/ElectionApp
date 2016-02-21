@@ -18,13 +18,17 @@ require.config({
     }
 });
 
-require(['app', 'views/welcome', 'backbone', 'bootstrap'], function (App, WelcomeView, Backbone) {
+require(['app', 'views/candidateList', 'backbone', 'bootstrap'], function (App, WelcomeView, Backbone) {
     App.start();
     
     App.Main.show(new WelcomeView({
-        model: new Backbone.Model({
+        collection: new Backbone.Collection([{
             isAdmin: true,
             name: 'Jaspreet'
-        })
+        }, {
+            
+        }, {
+            
+        }])
     }));
 });
