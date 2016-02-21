@@ -1,7 +1,7 @@
 <h1>
-    <% if(!isAdmin) { %>
-        Welcome <%= name %>
-    <% } else { %>
-        You Rock <%= name %>!!!
-    <% } %>
+    {[ if(!isAdmin) { ]}
+        Welcome {{ name }}
+    {[ } else { ]}
+        You Rock {{ name }}!!!
+    {[ } ]}
 </h1>

@@ -7,6 +7,7 @@ define(['marionette'], function(Marionette) {
             console.log('Application Started!');
         },
         regions: {
+            Header: 'div.header',
             Main: 'div.main'
         }
     });
