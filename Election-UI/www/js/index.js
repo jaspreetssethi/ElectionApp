@@ -29,7 +29,10 @@ require(['app', 'bootstrap', 'events/main'], function (App) {
     App.start();
     
     App.execute('headerShow');
-    App.execute('candidateListDisplay');
+
+    App.execute('voterForm');
+    
+   //     App.execute('candidateListDisplay');
     
  /*   App.Main.show(new WelcomeView({
         collection: new Backbone.Collection([{
