@@ -9,7 +9,8 @@ require.config({
         tpl: 'lib/requirejs-tpl/tpl',
         text: 'lib/text/text',
         underscore: 'lib/underscore/underscore',   
-        bootstrap: 'lib/bootstrap/dist/js/bootstrap'
+        bootstrap: 'lib/bootstrap/dist/js/bootstrap',
+        stickit: 'lib/backbone.stickit/backbone.stickit'
     },
     shim: {
         bootstrap: {
@@ -25,7 +26,7 @@ require.config({
     }
 });
 
-require(['app', 'bootstrap', 'events/main'], function (App) {
+require(['app', 'events/main', 'bootstrap', 'stickit'], function (App) {
     App.start();
     
     App.execute('headerShow');
