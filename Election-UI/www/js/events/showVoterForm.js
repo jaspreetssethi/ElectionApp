@@ -1,4 +1,4 @@
-define(['app'], function (App) {
+define(['app', 'models/citizen'], function (App, CitizenDetails) {
     App.commands.setHandler('voterForm', function () {
         require(['views/voterRegister', 'models/voter'], function (VoterRegister, VoterModel) {
             var voter = new VoterModel(),
