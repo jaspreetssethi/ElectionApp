@@ -36,3 +36,4 @@ node_modules
 /Election-UI/platforms
 /Election-UI/plugins
 /Election-UI/config.xml
+/Election-UI/www/js/lib/kendo

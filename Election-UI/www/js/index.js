@@ -10,7 +10,8 @@ require.config({
         text: 'lib/text/text',
         underscore: 'lib/underscore/underscore',   
         bootstrap: 'lib/bootstrap/dist/js/bootstrap',
-        stickit: 'lib/backbone.stickit/backbone.stickit'
+        stickit: 'lib/backbone.stickit/backbone.stickit',
+        kendo: 'lib/kendo/js'
     },
     shim: {
         bootstrap: {
@@ -31,9 +32,11 @@ require(['app', 'events/main', 'bootstrap', 'stickit'], function (App) {
     
     App.execute('headerShow');
 
-    App.execute('voterForm');
+  App.execute('voterForm');
     
-   //     App.execute('candidateListDisplay');
+    //App.execute('voterConfirm');
+    
+//   App.execute('candidateListDisplay');
     
  /*   App.Main.show(new WelcomeView({
         collection: new Backbone.Collection([{
