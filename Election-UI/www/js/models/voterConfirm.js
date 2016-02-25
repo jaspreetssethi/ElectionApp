@@ -1,16 +1,17 @@
 define(['backbone', 'config'], function(Backbone, Config){
-    var candidateModel = Backbone.Model.extend({
+    var voterModel = Backbone.Model.extend({
        defaults:{
            first_name: 'First Name',
            last_name: 'Last Name',
-           date_of_birth: '0000-00-00',
-           constituency: 'Constituency',
-           description: 'Description'
+           aadharNumber: '0000',
+           enrollment_id1: '0000',
+           enrollment_id2: '0000',
+           enrollment_id3: '0000'
        } 
     });
     var candidateModelCollection = Backbone.Collection.extend({
         model: candidateModel ,
-        url: Config.path + '/candidate' 
+        url: Config.path + '/voterConfirm' 
     });
 
     return candidateModelCollection;

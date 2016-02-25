@@ -1,4 +1,4 @@
-define(['backbone', 'config'], function (Backbone, Config) {
+define(['backbone', 'config', 'jquery'], function (Backbone, Config, $) {
     var citizen = Backbone.Model.extend({
         defaults: {
             UIDI: 00000,
@@ -10,7 +10,19 @@ define(['backbone', 'config'], function (Backbone, Config) {
             date_of_birth: '0000-00-00',
             address: 'Address',
             constituency: 'Constituency'
-        }
+        },
+        findByAadharNumber: function (aadharNumber) {
+            $.ajax({
+                url: Config.path + '/citizen',
+                param: {
+                    aadharNumber: aadharNumber
+                }
+            }).done(function (data) {
+                console.log(data);
+            });
+        },
+        url: Config.path + '/citizen'
     });
+
     return citizen;
 });

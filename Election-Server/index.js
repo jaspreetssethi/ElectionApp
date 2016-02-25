@@ -130,8 +130,28 @@ var SampleApp = function () {
                 .then(function(data){
                 res.json(data);
             })
+        }
+        };
+        /*
+        self.routes['/citizen'] = function(req, res) {
+            DB.any('INSERT INTO TEMP (UIDI, enrollment_id1, enrollment_id2, enrollment_id3, first_name, last_name) values(uidi, enrollment_id1, enrollment_id2, enrollment_id3, first_name, last_name)')
+                .then(function(data){
+                res.json(data);
+            })
             
         }
+        */
+        self.routes ['/citizen'] = function(req, res) {
+            
+            if(req.query.aadharNumber){
+                console.log(req.query.aadharNumber);
+            }
+            DB.any('SELECT (first_name, last_name, enrollment_id1, enrollment_id2, enrollment_id3, UIDI) from citizen where UIDI = ?1', req.query.aadharNumber)
+                .then(function(data){
+                res.json(data);
+            })
+            
+        
     };
 
 
