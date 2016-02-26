@@ -1,15 +1,15 @@
 define(['app', 'models/citizen', 'events/voterConfirm'], function (App, CitizenDetails, VoterConfirm) {
     App.commands.setHandler('voterForm', function () {
-        require(['views/voterRegister', 'views/voterConfirm', 'models/voter', 'models/citizen'], function (VoterRegister, VoterConfirm, VoterModel, CitizenModel) {
+        require(['views/voterRegister',  'models/voter', 'models/citizen'], function (VoterRegister, VoterModel, CitizenModel) {
             
                 
-            var citizen = new CitizenModel(),
-                citizenConfirmationView;
-            App.Main.show(citizenConfirmationView = new VoterConfirm({
-                model: citizen
-            }));
-                
-            
+//            var citizen = new CitizenModel(),
+//                citizenConfirmationView;
+//            App.Main.show(citizenConfirmationView = new VoterConfirm({
+//                model: citizen
+//            }));
+//                
+//            
             var voter = new VoterModel(),        
                 voterRegistrationView;
             App.Main.show(voterRegistrationView = new VoterRegister({
